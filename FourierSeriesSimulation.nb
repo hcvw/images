@@ -1,0 +1,166 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5772,        158]
+NotebookOptionsPosition[      5441,        141]
+NotebookOutlinePosition[      5800,        157]
+CellTagsIndexPosition[      5757,        154]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "this", " ", "simulation", " ", "models", " ", "how", " ", "increasing", 
+    " ", "n", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+      "the", " ", "order", " ", "of", " ", "the", " ", "Fourier", " ", 
+       "series", " ", "expansion", " ", "of", " ", "f", 
+       RowBox[{"(", "x", ")"}]}], "=", "x"}], ")"}], " ", "affects", " ", 
+    "the", " ", "curve"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"x_", ",", "n_"}], "]"}], "=", 
+     RowBox[{"FourierSeries", "[", 
+      RowBox[{"x", ",", "x", ",", "n"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"v", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"f", "[", 
+        RowBox[{"x", ",", "n"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "0", ",", "10"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"Part", "[", 
+          RowBox[{"v", ",", "n"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+       RowBox[{"PlotLabel", "\[Rule]", 
+        RowBox[{"\"\<Fourier Series of f(x)=x when n= \>\"", "<>", 
+         RowBox[{"ToString", "[", "n", "]"}]}]}], ",", 
+       RowBox[{"Ticks", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "\[Pi]"}], ",", 
+            RowBox[{
+             RowBox[{"-", "\[Pi]"}], "/", "2"}], ",", 
+            RowBox[{"\[Pi]", "/", "2"}], ",", "\[Pi]"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", "4"}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Red"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Blue"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "0", ",", "10", ",", "1", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.71261879965969*^9, 3.712619028402007*^9}, {
+  3.71261910040273*^9, 3.7126191111207743`*^9}, {3.712619361763433*^9, 
+  3.712619474022702*^9}, {3.712619525326086*^9, 3.712619536908224*^9}, {
+  3.712619643357657*^9, 3.712619707785111*^9}, {3.712682645651555*^9, 
+  3.7126827565348253`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 0, 10, 1}}, Typeset`size$$ = {
+    360., {116., 121.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`n$214157$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$214157$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{$CellContext`x, 
+         Part[$CellContext`v, $CellContext`n$$]}, {$CellContext`x, -Pi, Pi}, 
+        PlotLabel -> StringJoin["Fourier Series of f(x)=x when n= ", 
+          ToString[$CellContext`n$$]], 
+        Ticks -> {{-Pi, (-Pi)/2, Pi/2, Pi}, {-Pi, Pi}}, PlotRange -> 4, 
+        PlotStyle -> {{Thick, Red}, {Thick, Blue}}], 
+      "Specifications" :> {{$CellContext`n$$, 0, 10, 1, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {161., 167.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.712619031555182*^9, 3.712619114912507*^9, {3.712619376169194*^9, 
+   3.7126193886559763`*^9}, 3.712619477710528*^9, 3.712619540578079*^9, {
+   3.712619672301005*^9, 3.712619711184802*^9}, 3.712624078821204*^9, 
+   3.71268276317161*^9}]
+}, Open  ]]
+},
+WindowSize->{859, 637},
+WindowMargins->{{Automatic, 196}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2724, 73, 212, "Input"],
+Cell[3307, 97, 2118, 41, 390, "Output"]
+}, Open  ]]
+}
+]
+*)
+
